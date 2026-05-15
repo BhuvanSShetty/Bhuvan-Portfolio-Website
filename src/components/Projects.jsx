@@ -1,20 +1,22 @@
 import React from 'react';
 import projectImage from '../assets/image.png';
+import splitbillImage from '../assets/Splitbill.png';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Simulation of Attendance System using BLE',
-      category: 'Simulation / MERN',
-      period: 'Sept 2025 – Oct 2025',
-      description: 'Architected a full MERN stack simulation of a Bluetooth-based attendance system. Developed a standalone simulator to mimic student BLE pings and a teacher dashboard for live monitoring.',
+      title: 'SplitReceipt',
+      category: 'MERN / AI',
+      period: 'May 2026',
+      description: 'AI-powered receipt splitting web app that turns restaurant bill images into structured line items, taxes, and totals, then calculates what each person owes with editable item assignment.',
       bullets: [
-        'Developed a Node.js simulator mimicking student BLE devices.',
-        'Built a REST API with Express and MongoDB Atlas for cloud storage.',
-        'Designed a responsive React + Tailwind dashboard for live updates.'
+        'Integrated OCR.space with Groq LLM parsing to convert messy receipt text into structured JSON.',
+        'Implemented proportional tax and tip splitting with per-person item edits.',
+        'Built a scalable REST API with JWT auth, refresh token rotation, and HttpOnly cookies.'
       ],
-      image: 'https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=2070&auto=format&fit=crop',
+      image: splitbillImage,
       link: 'https://github.com/BhuvanSShetty',
+      deploymentlink: 'https://split.bhuvans.in',
       delay: ''
     },
     {
