@@ -16,7 +16,7 @@ const Navbar = () => {
         </div>
 
         <button
-          onClick={() => window.open('https://drive.google.com/file/d/1_xlFGAFUU9qvSYaiwTz_sK-evVbsWm7H/view?usp=drive_link', '_blank')}
+          onClick={() => window.open('https://drive.google.com/file/d/18uc5hLDToqjfwLJ3vZ3ZN2K---m1N-db/view?usp=drive_link', '_blank')}
           className="btn-primary-gradient px-6 py-2.5 rounded-lg text-sm font-semibold shadow-lg shadow-primary/10"
         >
           Resume
