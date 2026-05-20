@@ -14,7 +14,7 @@ function App() {
   const [hasEntered, setHasEntered] = useState(false);
 
   return (
-    <div className="min-h-screen font-sans overflow-x-hidden bg-[#131313] text-[#e5e2e1] relative">
+    <div className="min-h-[100dvh] font-sans overflow-x-hidden bg-[#131313] text-[#e5e2e1] relative">
       
       {/* Global Background Grid (Dots) & Cinematic Noise Overlay */}
       <div className="fixed inset-0 z-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'radial-gradient(rgba(187, 201, 208, 0.25) 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>

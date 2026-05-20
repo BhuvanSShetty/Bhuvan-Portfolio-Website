@@ -5,6 +5,7 @@ const AudioPlayer = ({ isVisible = true }) => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [volume, setVolume] = useState(0.5);
   const audioRef = useRef(null);
+  const hasManuallyToggled = useRef(false);
 
   useEffect(() => {
     // Initialize audio
@@ -12,18 +13,9 @@ const AudioPlayer = ({ isVisible = true }) => {
     audioRef.current.loop = true;
     audioRef.current.volume = volume;
 
-    const tryPlay = () => {
-      const playPromise = audioRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.then(() => {
-          setIsPlaying(true);
-        }).catch(error => {
-          setIsPlaying(false);
-        });
-      }
-    };
-
     const handleFirstInteraction = () => {
+      if (hasManuallyToggled.current) return; // Ignore if user already explicitly clicked play/pause
+
       if (audioRef.current && audioRef.current.paused) {
         const playPromise = audioRef.current.play();
         if (playPromise !== undefined) {
@@ -32,6 +24,7 @@ const AudioPlayer = ({ isVisible = true }) => {
             window.removeEventListener('click', handleFirstInteraction);
             window.removeEventListener('keydown', handleFirstInteraction);
             window.removeEventListener('touchstart', handleFirstInteraction);
+            window.removeEventListener('scroll', handleFirstInteraction);
           }).catch(error => {
             setIsPlaying(false);
           });
@@ -42,7 +35,7 @@ const AudioPlayer = ({ isVisible = true }) => {
     window.addEventListener('click', handleFirstInteraction);
     window.addEventListener('keydown', handleFirstInteraction);
     window.addEventListener('touchstart', handleFirstInteraction);
-    window.addEventListener('scroll', handleFirstInteraction);
+    window.addEventListener('scroll', handleFirstInteraction, { passive: true });
 
     return () => {
       if (audioRef.current) {
@@ -56,6 +49,7 @@ const AudioPlayer = ({ isVisible = true }) => {
   }, []); // Note: volume is not in dep array intentionally so we don't recreate audio on volume change
 
   const toggleMusic = () => {
+    hasManuallyToggled.current = true;
     if (isPlaying) {
       audioRef.current.pause();
       setIsPlaying(false);

@@ -41,7 +41,7 @@ const EnterScreen = ({ onEnter, hasEntered }) => {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center transition-all duration-[1200ms] ease-in-out ${hasEntered ? 'opacity-0 scale-[1.2] blur-[15px] pointer-events-none' : 'opacity-100 scale-100 blur-none'}`}
+      className={`fixed top-0 left-0 w-full h-[100dvh] z-[100] flex flex-col items-center justify-center transition-all duration-[1200ms] ease-in-out overflow-hidden ${hasEntered ? 'opacity-0 scale-[1.2] blur-[15px] pointer-events-none' : 'opacity-100 scale-100 blur-none bg-[#131313]'}`}
     >
 
       {/* 1. Loading Step */}
