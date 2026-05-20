@@ -47,6 +47,7 @@ const AudioPlayer = () => {
     window.addEventListener('click', handleFirstInteraction);
     window.addEventListener('keydown', handleFirstInteraction);
     window.addEventListener('touchstart', handleFirstInteraction);
+    window.addEventListener('scroll', handleFirstInteraction); // Added this so it tries on scroll too
 
     return () => {
       if (audioRef.current) {
