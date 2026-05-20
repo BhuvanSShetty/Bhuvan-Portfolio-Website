@@ -35,7 +35,7 @@ const AboutSection = () => {
       </div>
 
       {/* Academic Foundation Stats */}
-      <div className="mb-32">
+      <div id="academics" className="mb-32 scroll-mt-32">
         <h2 className="text-xs uppercase tracking-[0.2em] text-primary mb-12 font-bold">Academic Foundation</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-surface-container-low p-8 rounded-lg border border-outline-variant/10 flex flex-col justify-between min-h-[240px] hover:border-primary/20 transition-all">
@@ -74,7 +74,7 @@ const AboutSection = () => {
       </div>
 
       {/* Achievements Bento Section */}
-      <div className="mb-32">
+      <div id="achievements" className="mb-32 scroll-mt-32">
         <h2 className="text-xs uppercase tracking-[0.2em] text-primary mb-12 font-bold">Key Achievements</h2>
         <div className="flex flex-wrap gap-4">
           {[
@@ -120,22 +120,38 @@ const AboutSection = () => {
       </div>
 
       {/* Volunteer Work */}
-      <div className="glass-panel p-12 rounded-xl border border-outline-variant/20">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+      <div className="mt-32 relative bg-[#1b1b1b]/40 backdrop-blur-md p-10 md:p-14 rounded-[2.5rem] border border-[#bbc9d0]/10 overflow-hidden shadow-2xl group transition-all hover:bg-[#1b1b1b]/60 hover:border-[#bbc9d0]/20">
+        
+        {/* Subtle Background Glow */}
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[radial-gradient(ellipse_at_center,_rgba(187,201,208,0.05)_0%,_transparent_70%)] rounded-full blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-[radial-gradient(ellipse_at_center,_rgba(187,201,208,0.1)_0%,_transparent_70%)]"></div>
+
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-12 relative z-10">
           <div className="max-w-xl">
-            <p className="text-[10px] uppercase tracking-widest text-on-secondary-container mb-4 font-bold">Social Impact</p>
-            <h2 className="text-4xl font-bold text-on-tertiary-container mb-4">Empowering via U&I</h2>
-            <p className="text-on-secondary-container leading-relaxed">
+            <div className="flex items-center gap-3 mb-6">
+              <span className="px-4 py-1.5 rounded-full border border-[#bbc9d0]/20 bg-transparent text-[#bbc9d0] text-[10px] font-bold tracking-[0.2em] uppercase">
+                Social Impact
+              </span>
+              <div className="h-[1px] w-12 bg-[#bbc9d0]/20"></div>
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#f8f9fa] tracking-tight mb-6 leading-tight">
+              Empowering via <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#bbc9d0] to-[#5f6c73]">U&I</span>
+            </h2>
+            
+            <p className="text-[#c2c7cb] text-lg leading-relaxed font-medium">
               Applying principles of structure and growth to community impact as a Teaching Volunteer, mentoring students to reach their full potential.
             </p>
           </div>
-          <div className="flex items-center gap-8">
-            <div className="text-center">
-              <p className="text-5xl font-black text-primary">Volunteer</p>
-              <p className="text-[10px] uppercase tracking-widest text-on-secondary-container mt-2">Teaching & Mentorship</p>
+          
+          <div className="flex flex-row items-center gap-6 md:gap-8 pl-0 lg:pl-12 lg:border-l-2 border-[#bbc9d0]/10">
+            <div className="text-left lg:text-center">
+              <p className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#f8f9fa] to-[#5f6c73]">Volunteer</p>
+              <p className="text-[#c2c7cb] text-[11px] uppercase tracking-[0.2em] mt-3 font-semibold">Teaching & Mentorship</p>
             </div>
-            <div className="w-px h-16 bg-outline-variant/30 hidden md:block"></div>
-            <span className="material-symbols-outlined text-5xl text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>volunteer_activism</span>
+            
+            <div className="hidden sm:flex items-center justify-center w-16 h-16 rounded-full border border-[#bbc9d0]/20 bg-[#131313]/50 shadow-[0_0_20px_rgba(187,201,208,0.05)]">
+              <span className="material-symbols-outlined text-3xl text-[#bbc9d0]" style={{ fontVariationSettings: "'FILL' 1" }}>volunteer_activism</span>
+            </div>
           </div>
         </div>
       </div>

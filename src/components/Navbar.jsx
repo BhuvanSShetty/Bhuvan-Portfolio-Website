@@ -1,32 +1,34 @@
 import React from 'react';
 
 const Navbar = () => {
-
-
-
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/60 backdrop-blur-md border-b border-outline-variant/10">
-      <div className="flex justify-between items-center px-6 md:px-12 py-6 max-w-[1440px] mx-auto">
-        <div className="text-xl font-bold tracking-tighter text-primary font-headline">
-          Bhuvan S Shetty
-        </div>
-
-        <div className="hidden md:flex gap-10 items-center">
-          <a href="#home" className="text-primary font-semibold border-b-2 border-primary pb-1 font-headline tracking-tight">Home</a>
-          <a href="#projects" className="text-primary-container hover:text-primary transition-colors font-headline tracking-tight">Projects</a>
-          <a href="#about" className="text-primary-container hover:text-primary transition-colors font-headline tracking-tight">About</a>
-          <a href="mailto:Bhuvansshetty90@gmail.com" className="text-primary-container hover:text-primary transition-colors font-headline tracking-tight">Contact</a>
-        </div>
-
-
-
-        <button
-          onClick={() => window.open('https://drive.google.com/file/d/18uc5hLDToqjfwLJ3vZ3ZN2K---m1N-db/view?usp=drive_link', '_blank')}
-          className="btn-primary-gradient px-6 py-2.5 rounded-lg text-sm font-semibold shadow-lg shadow-primary/10"
-        >
-          Resume
-        </button>
+    <nav className="fixed top-4 md:top-8 left-0 right-0 flex justify-between items-center px-4 md:px-12 z-[110] w-full max-w-[1600px] mx-auto pointer-events-none">
+      
+      {/* Logo Pill */}
+      <div className="flex-1 flex justify-start pointer-events-auto">
+        <a href="#home" className="flex items-center px-4 py-2 sm:px-6 sm:py-2.5 rounded-full border border-[#bbc9d0]/10 bg-[#1b1b1b]/70 backdrop-blur-xl hover:bg-[#1b1b1b]/90 transition-colors shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+          <span className="font-bold text-[15px] sm:text-lg whitespace-nowrap tracking-wide text-[#e5e2e1]">
+            Bhuvan S Shetty
+          </span>
+        </a>
       </div>
+      
+      {/* Center Nav Pill */}
+      <div className="hidden md:flex flex-none items-center gap-8 px-8 py-3 rounded-full border border-[#bbc9d0]/10 bg-[#1b1b1b]/70 backdrop-blur-xl text-[13px] font-bold tracking-wide pointer-events-auto shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+        <a href="#home" className="text-[#c2c7cb] hover:text-[#bbc9d0] transition-colors uppercase">Home</a>
+        <a href="#tech-core" className="text-[#c2c7cb] hover:text-[#bbc9d0] transition-colors uppercase">Skills</a>
+        <a href="#projects" className="text-[#c2c7cb] hover:text-[#bbc9d0] transition-colors uppercase">Projects</a>
+        <a href="#academics" className="text-[#c2c7cb] hover:text-[#bbc9d0] transition-colors uppercase">Academics</a>
+        <a href="#achievements" className="text-[#c2c7cb] hover:text-[#bbc9d0] transition-colors uppercase">Achievements</a>
+      </div>
+      
+      {/* Right Resume Pill */}
+      <div className="flex-1 flex justify-end pointer-events-auto">
+        <a href="/resume.pdf" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 sm:gap-2 px-4 py-2 sm:px-6 sm:py-2.5 rounded-full border border-[#bbc9d0]/20 bg-[#bbc9d0]/10 hover:bg-[#bbc9d0]/20 backdrop-blur-xl text-[#bbc9d0] text-[13px] sm:text-sm font-bold transition-all shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+          Resume <span className="material-symbols-outlined text-[15px] sm:text-base">download</span>
+        </a>
+      </div>
+
     </nav>
   );
 };
