@@ -10,7 +10,6 @@ import ShootingStars from './components/ShootingStars';
 import EnterScreen from './components/EnterScreen';
 
 function App() {
-  const [isMounted, setIsMounted] = useState(false);
   const [hasEntered, setHasEntered] = useState(false);
 
   return (

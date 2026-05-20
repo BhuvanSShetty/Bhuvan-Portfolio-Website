@@ -9,15 +9,6 @@ const Hero = ({ isVisible }) => {
         {/* Text Content */}
         <div className="lg:col-span-7 flex flex-col justify-center">
 
-          {/* Backend Engineer Tag */}
-          <div
-            className={`flex items-center gap-4 mb-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0 blur-none' : 'opacity-0 translate-y-8 blur-md'}`}
-            style={{ transitionDelay: '500ms' }}
-          >
-
-
-          </div>
-
           {/* Main Headline */}
           <h1
             className={`text-5xl md:text-[5.5rem] lg:text-[7rem] font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-[#f8f9fa] to-[#5f6c73] leading-[0.9] mb-8 transition-all duration-[1200ms] ease-out ${isVisible ? 'opacity-100 translate-y-0 blur-none scale-100' : 'opacity-0 translate-y-12 blur-xl scale-105'}`}
