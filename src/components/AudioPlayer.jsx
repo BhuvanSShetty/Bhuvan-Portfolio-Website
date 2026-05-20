@@ -28,17 +28,25 @@ const AudioPlayer = () => {
     // Wait for the user's VERY FIRST interaction anywhere on the website
     const handleFirstInteraction = () => {
       if (audioRef.current && audioRef.current.paused) {
-        tryPlay();
+        const playPromise = audioRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            // Autoplay started!
+            setIsPlaying(true);
+            // ONLY remove listeners if the play was successful!
+            window.removeEventListener('click', handleFirstInteraction);
+            window.removeEventListener('keydown', handleFirstInteraction);
+            window.removeEventListener('touchstart', handleFirstInteraction);
+          }).catch(error => {
+            setIsPlaying(false);
+          });
+        }
       }
-      // Remove listeners after the first interaction so it doesn't fire constantly
-      window.removeEventListener('click', handleFirstInteraction);
-      window.removeEventListener('keydown', handleFirstInteraction);
-      window.removeEventListener('scroll', handleFirstInteraction);
     };
 
     window.addEventListener('click', handleFirstInteraction);
     window.addEventListener('keydown', handleFirstInteraction);
-    window.addEventListener('scroll', handleFirstInteraction, { once: true });
+    window.addEventListener('touchstart', handleFirstInteraction);
 
     return () => {
       if (audioRef.current) {
@@ -46,6 +54,7 @@ const AudioPlayer = () => {
       }
       window.removeEventListener('click', handleFirstInteraction);
       window.removeEventListener('keydown', handleFirstInteraction);
+      window.removeEventListener('touchstart', handleFirstInteraction);
       window.removeEventListener('scroll', handleFirstInteraction);
     };
   }, []);
