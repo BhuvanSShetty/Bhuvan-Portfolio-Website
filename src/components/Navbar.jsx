@@ -1,6 +1,9 @@
 import React from 'react';
 
 const Navbar = () => {
+
+
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/60 backdrop-blur-md border-b border-outline-variant/10">
       <div className="flex justify-between items-center px-6 md:px-12 py-6 max-w-[1440px] mx-auto">
@@ -14,6 +17,8 @@ const Navbar = () => {
           <a href="#about" className="text-primary-container hover:text-primary transition-colors font-headline tracking-tight">About</a>
           <a href="mailto:Bhuvansshetty90@gmail.com" className="text-primary-container hover:text-primary transition-colors font-headline tracking-tight">Contact</a>
         </div>
+
+
 
         <button
           onClick={() => window.open('https://drive.google.com/file/d/18uc5hLDToqjfwLJ3vZ3ZN2K---m1N-db/view?usp=drive_link', '_blank')}

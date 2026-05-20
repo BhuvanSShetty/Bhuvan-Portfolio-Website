@@ -5,11 +5,13 @@ import TechCore from './components/TechCore';
 import Projects from './components/Projects';
 import AboutSection from './components/AboutSection';
 import Footer from './components/Footer';
+import AudioPlayer from './components/AudioPlayer';
 
 function App() {
   return (
     <div className="min-h-screen">
       <Navbar />
+      <AudioPlayer />
       <main>
         <Hero />
         <TechCore />
