@@ -24,7 +24,7 @@ const Navbar = () => {
 
       {/* Right Resume Pill */}
       <div className="flex-1 flex justify-end pointer-events-auto">
-        <a href="https://drive.google.com/file/d/18uc5hLDToqjfwLJ3vZ3ZN2K---m1N-db/view?usp=drive_link" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 sm:gap-2 px-4 py-2 sm:px-6 sm:py-2.5 rounded-full border border-[#bbc9d0]/20 bg-[#bbc9d0]/10 hover:bg-[#bbc9d0]/20 backdrop-blur-xl text-[#bbc9d0] text-[13px] sm:text-sm font-bold transition-all shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+        <a href="https://drive.google.com/file/d/1a0NutcE-vfQQA8pacj0hI3O4YNDUkZgg/view?usp=sharing" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 sm:gap-2 px-4 py-2 sm:px-6 sm:py-2.5 rounded-full border border-[#bbc9d0]/20 bg-[#bbc9d0]/10 hover:bg-[#bbc9d0]/20 backdrop-blur-xl text-[#bbc9d0] text-[13px] sm:text-sm font-bold transition-all shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
           Resume <span className="material-symbols-outlined text-[15px] sm:text-base">download</span>
         </a>
       </div>

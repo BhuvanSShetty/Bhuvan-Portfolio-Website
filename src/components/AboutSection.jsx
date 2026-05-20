@@ -4,6 +4,7 @@ import aikyamRunnerUp from '../assets/aikyam_runner_up.JPG';
 import rvLogo from '../assets/rv_logo.png';
 import jsLogo from '../assets/js.png';
 import scaceLogo from '../assets/Scace.png';
+import puImage from '../assets/pu.jpg';
 
 const AboutSection = () => {
   return (
@@ -82,46 +83,62 @@ const AboutSection = () => {
       {/* Achievements Bento Section */}
       <div id="achievements" className="mb-16 scroll-mt-32">
         <h2 className="text-base md:text-lg uppercase tracking-[0.2em] text-[#bbc9d0] mb-12 font-black">Key Achievements</h2>
-        <div className="flex flex-wrap gap-4">
+
+        {/* Top Section: Text-Only Achievements */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           {[
-            { tag: 'ACADEMIC', title: '100/100 in Computer Science (PUC)', icon: 'terminal' },
-            { tag: 'ACADEMIC', title: '100/100 in ADA Lab & Web Developement  (RVITM)', icon: 'code' },
-            { tag: 'COMPETITION', title: '1st Place Winner - Science Fest 2019', icon: 'military_tech' },
+            { tag: 'ACADEMIC', title: '100/100 in ADA Lab & Web Developement (RVITM)', icon: 'code' },
+            { tag: 'COMPETITION', title: '1st Place Winner - Science Fest 2019', icon: 'emoji_events' },
             { tag: 'GAT HACKATHON', title: '7th Place in GAT Hackathon 2026', icon: 'military_tech' },
-            { tag: 'KSSEM HACKATHON', title: 'Placed with in top 10 in KSSEM Hackathon 2025', icon: 'military_tech' }
+            { tag: 'KSSEM HACKATHON', title: 'Placed within top 10 in KSSEM Hackathon 2025', icon: 'military_tech' }
           ].map((item, idx) => (
-            <div key={idx} className="bg-surface-container-highest/40 border border-outline-variant/20 p-6 rounded-xl flex items-center gap-6 flex-1 min-w-[300px]">
-              <div className="bg-primary/10 p-4 rounded-full">
-                <span className="material-symbols-outlined text-primary text-3xl">{item.icon}</span>
+            <div key={idx} className="bg-surface-container-highest/40 border border-outline-variant/20 p-5 rounded-xl flex items-center gap-5 group hover:bg-surface-container-highest/60 hover:border-primary/30 transition-all">
+              <div className="bg-primary/10 p-3 rounded-full flex-shrink-0">
+                <span className="material-symbols-outlined text-primary text-2xl">{item.icon}</span>
               </div>
               <div>
                 <p className="text-[10px] font-black text-primary-container tracking-widest uppercase mb-1">{item.tag}</p>
-                <p className="text-lg font-bold text-on-surface">{item.title}</p>
+                <p className="text-sm md:text-base font-bold text-on-surface leading-tight">{item.title}</p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Aikyam 2026 Featured Achievement */}
-        <div className="mt-8 bg-surface-container-highest/40 border border-primary/20 rounded-xl overflow-hidden">
-          <div className="p-6 flex items-center gap-6">
-            <div className="bg-primary/10 p-4 rounded-full">
-              <span className="material-symbols-outlined text-primary text-3xl">military_tech</span>
+        {/* Bottom Section: Featured Image Achievements */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+          {/* Aikyam 2026 Featured Achievement (Bigger, Left) */}
+          <div className="lg:col-span-2 bg-surface-container-highest/40 border border-primary/20 rounded-xl overflow-hidden flex flex-col group min-h-[350px]">
+            <div className="p-6 flex items-center gap-5">
+              <div className="bg-primary/10 p-3.5 rounded-full flex-shrink-0">
+                <span className="material-symbols-outlined text-primary text-2xl md:text-3xl">military_tech</span>
+              </div>
+              <div>
+                <p className="text-[10px] font-black text-primary-container tracking-widest uppercase mb-1">AIKYAM 2026</p>
+                <p className="text-base md:text-lg font-bold text-on-surface leading-tight">Runner up in AIKYAM 2026 RVITM</p>
+              </div>
             </div>
-            <div>
-              <p className="text-[10px] font-black text-primary-container tracking-widest uppercase mb-1">AIKYAM 2026</p>
-              <p className="text-lg font-bold text-on-surface">Runner up in AIKYAM 2026 RVITM</p>
-            </div>
-          </div>
-          <div className="px-5 pb-5 flex justify-center">
-            <div className="rounded-lg overflow-hidden border border-outline-variant/10 w-fit">
-              <img
-                src={aikyamRunnerUp}
-                alt="Runner up at AIKYAM 2026 RVITM"
-                className="max-h-[400px] block"
-              />
+            <div className="flex-1 w-full border-t border-primary/10 bg-black/20 flex items-center justify-center p-6">
+              <img src={aikyamRunnerUp} alt="Runner up at AIKYAM 2026 RVITM" className="max-h-[200px] md:max-h-[240px] w-auto object-contain rounded-lg shadow-2xl border border-white/5 group-hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
+
+          {/* PU 100/100 Featured Achievement (Smaller, Right) */}
+          <div className="lg:col-span-1 bg-surface-container-highest/40 border border-outline-variant/20 rounded-xl overflow-hidden flex flex-col group min-h-[350px]">
+            <div className="p-6 flex items-center gap-5">
+              <div className="bg-primary/10 p-3.5 rounded-full flex-shrink-0">
+                <span className="material-symbols-outlined text-primary text-2xl md:text-3xl">terminal</span>
+              </div>
+              <div>
+                <p className="text-[10px] font-black text-primary-container tracking-widest uppercase mb-1">ACADEMIC</p>
+                <p className="text-base md:text-lg font-bold text-on-surface leading-tight">100/100 in Computer Science (PUC 1st Year and 2nd Year)</p>
+              </div>
+            </div>
+            <div className="flex-1 w-full border-t border-outline-variant/10 bg-black/20 flex items-center justify-center p-6">
+              <img src={puImage} alt="100/100 in Computer Science (PUC)" className="max-h-[200px] md:max-h-[240px] w-auto object-contain rounded-lg shadow-2xl border border-white/5 group-hover:scale-105 transition-transform duration-700" />
+            </div>
+          </div>
+
         </div>
       </div>
 
