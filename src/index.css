@@ -35,10 +35,8 @@
     color: var(--color-on-surface);
     font-family: var(--font-body);
     position: relative;
-    /* Move dot pattern directly to body background for better layering */
-    background-image: radial-gradient(rgba(187, 201, 208, 0.15) 1px, transparent 1px);
-    background-size: 32px 32px;
-    background-attachment: fixed;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 
   @keyframes lightning-1 {
@@ -108,4 +106,5 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--color-background);
 }
