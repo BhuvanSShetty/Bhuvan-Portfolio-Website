@@ -14,9 +14,7 @@ const Hero = ({ isVisible }) => {
             className={`flex items-center gap-4 mb-8 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0 blur-none' : 'opacity-0 translate-y-8 blur-md'}`}
             style={{ transitionDelay: '500ms' }}
           >
-            <div className="px-5 py-2 rounded-full border border-[#bbc9d0]/20 bg-transparent text-[#bbc9d0] text-xs font-bold tracking-[0.2em] uppercase">
-              Software Engineer
-            </div>
+
 
           </div>
 
@@ -33,7 +31,7 @@ const Hero = ({ isVisible }) => {
             className={`text-[#c2c7cb] text-lg md:text-xl font-medium tracking-wide max-w-xl leading-relaxed mb-10 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0 blur-none' : 'opacity-0 translate-y-8 blur-md'}`}
             style={{ transitionDelay: '900ms' }}
           >
-            Building scalable systems and high-performance APIs. Focusing on reliability, clean architecture, and efficient data handling.
+            Building scalable systems and high-performance APIs. Focusing on reliability, clean architecture, and efficient data handling. Currently pursuing a Bachelor’s degree in Computer Science at RV Institute of Technology and Management , Bengaluru.
           </p>
 
           {/* Buttons */}
@@ -87,10 +85,6 @@ const Hero = ({ isVisible }) => {
                 className="w-full h-full object-cover transition-all duration-[2000ms] group-hover:scale-105 brightness-90 group-hover:brightness-100"
               />
 
-              {/* Location Badge */}
-              <div className="absolute bottom-6 left-6 z-20 flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#bbc9d0]/20 bg-[#131313]/70 backdrop-blur-md text-[#bbc9d0] text-[13px] font-semibold tracking-wide">
-                <span className="animate-pulse text-[#bbc9d0]">✦</span> Based in Bengaluru
-              </div>
             </div>
           </div>
         </div>

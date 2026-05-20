@@ -10,9 +10,9 @@ const TechCore = () => {
   };
 
   return (
-    <section id="tech-core" className="py-32 px-8 lg:px-24 max-w-[1600px] mx-auto relative z-10">
+    <section id="skills" className="py-12 md:py-16 px-8 lg:px-24 max-w-[1600px] mx-auto relative z-10">
       
-      <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+      <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
         <div>
           <div className="px-5 py-2 mb-6 inline-block rounded-full border border-[#bbc9d0]/20 bg-transparent text-[#bbc9d0] text-xs font-bold tracking-[0.2em] uppercase">
             Stack & Expertise

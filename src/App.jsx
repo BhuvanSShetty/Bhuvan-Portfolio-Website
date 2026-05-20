@@ -42,7 +42,7 @@ function App() {
         <Navbar />
       </div>
       <EnterScreen onEnter={() => setHasEntered(true)} hasEntered={hasEntered} />
-      <AudioPlayer />
+      <AudioPlayer isVisible={hasEntered} />
       
       <div className={`transition-opacity duration-1000 relative z-10 ${hasEntered ? 'opacity-100 delay-300' : 'opacity-0 pointer-events-none'}`}>
         <main>

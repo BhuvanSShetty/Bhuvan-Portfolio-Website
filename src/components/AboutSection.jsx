@@ -1,12 +1,15 @@
 import React from 'react';
-import csAbstract from '../assets/cs_abstract.png';
+import pegaImage from '../assets/pega.jpg';
 import aikyamRunnerUp from '../assets/aikyam_runner_up.JPG';
+import rvLogo from '../assets/rv_logo.png';
+import jsLogo from '../assets/js.png';
+import scaceLogo from '../assets/Scace.png';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-32 px-6 md:px-12 max-w-[1440px] mx-auto overflow-hidden">
+    <section className="py-12 md:py-16 px-8 lg:px-24 max-w-[1600px] mx-auto text-[#c2c7cb] relative z-10">
       {/* Engineering Philosophy */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-32 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-16 items-center">
         <div className="md:col-span-8">
           <p className="text-xs uppercase tracking-[0.2em] text-primary mb-4 font-bold">Engineering Philosophy</p>
           <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 text-on-surface leading-tight">
@@ -20,7 +23,7 @@ const AboutSection = () => {
           <div className="w-full aspect-square bg-surface-container rounded-lg overflow-hidden relative border border-outline-variant/10 shadow-2xl">
             <img
               className="w-full h-full object-cover transition-all duration-700 brightness-75 hover:brightness-100"
-              src={csAbstract}
+              src={pegaImage}
               alt="Structural Engineering Core"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
@@ -35,12 +38,12 @@ const AboutSection = () => {
       </div>
 
       {/* Academic Foundation Stats */}
-      <div id="academics" className="mb-32 scroll-mt-32">
-        <h2 className="text-xs uppercase tracking-[0.2em] text-primary mb-12 font-bold">Academic Foundation</h2>
+      <div id="academics" className="mb-16 scroll-mt-32">
+        <h2 className="text-base md:text-lg uppercase tracking-[0.2em] text-[#bbc9d0] mb-12 font-black">Academic Foundation</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-surface-container-low p-8 rounded-lg border border-outline-variant/10 flex flex-col justify-between min-h-[240px] hover:border-primary/20 transition-all">
             <div>
-              <span className="material-symbols-outlined text-primary-container mb-4 text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>account_balance</span>
+              <img src={rvLogo} alt="RV Institutions Logo" className="h-20 w-auto max-w-[160px] bg-white rounded-xl p-1.5 mb-6 object-contain shadow-lg opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300" />
               <h3 className="text-2xl font-bold text-on-surface">RV Institute of Technology (RVITM)</h3>
               <p className="text-on-surface-variant text-sm mt-2">B.E. in Computer Science & Engineering (2027)</p>
             </div>
@@ -51,9 +54,10 @@ const AboutSection = () => {
 
           <div className="bg-surface-container-low p-8 rounded-lg border border-outline-variant/10 flex flex-col justify-between min-h-[240px] hover:border-primary/20 transition-all">
             <div>
-              <span className="material-symbols-outlined text-primary-container mb-4 text-3xl">school</span>
+              <img src={jsLogo} alt="Jnanasudha Logo" className="h-20 w-auto max-w-[160px] bg-white rounded-xl p-2 mb-6 object-contain shadow-lg opacity-90 hover:opacity-100 hover:scale-105 transition-all duration-300" />
               <h3 className="text-2xl font-bold text-on-surface">Karkala Jnanasudha PU</h3>
               <p className="text-on-surface-variant text-sm mt-2">Class of 2023</p>
+              <p className="text-on-surface-variant text-sm mt-2">PCMC</p>
             </div>
             <div className="mt-8">
               <p className="text-4xl font-extrabold text-primary">94.14% <span className="text-sm font-normal text-on-surface-variant">Aggregate</span></p>
@@ -62,7 +66,9 @@ const AboutSection = () => {
 
           <div className="bg-surface-container p-8 rounded-lg border border-outline-variant/10 flex flex-col justify-between min-h-[240px] hover:border-primary/20 transition-all">
             <div>
-              <span className="material-symbols-outlined text-primary-container mb-4 text-3xl" style={{ fontVariationSettings: "'FILL' 1" }}>workspace_premium</span>
+              <div className="h-20 w-20 md:w-24 bg-white rounded-xl mb-6 shadow-lg overflow-hidden flex items-center justify-center relative group-hover:scale-105 transition-transform duration-300">
+                <img src={scaceLogo} alt="Silicon City Academy Logo" className="h-full w-full object-contain scale-[1.4] opacity-90 group-hover:opacity-100 transition-all duration-300" />
+              </div>
               <h3 className="text-2xl font-bold text-on-surface">Silicon City Academy</h3>
               <p className="text-on-surface-variant text-sm mt-2">Secondary Education (2021)</p>
             </div>
@@ -74,8 +80,8 @@ const AboutSection = () => {
       </div>
 
       {/* Achievements Bento Section */}
-      <div id="achievements" className="mb-32 scroll-mt-32">
-        <h2 className="text-xs uppercase tracking-[0.2em] text-primary mb-12 font-bold">Key Achievements</h2>
+      <div id="achievements" className="mb-16 scroll-mt-32">
+        <h2 className="text-base md:text-lg uppercase tracking-[0.2em] text-[#bbc9d0] mb-12 font-black">Key Achievements</h2>
         <div className="flex flex-wrap gap-4">
           {[
             { tag: 'ACADEMIC', title: '100/100 in Computer Science (PUC)', icon: 'terminal' },
@@ -120,8 +126,8 @@ const AboutSection = () => {
       </div>
 
       {/* Volunteer Work */}
-      <div className="mt-32 relative bg-[#1b1b1b]/40 backdrop-blur-md p-10 md:p-14 rounded-[2.5rem] border border-[#bbc9d0]/10 overflow-hidden shadow-2xl group transition-all hover:bg-[#1b1b1b]/60 hover:border-[#bbc9d0]/20">
-        
+      <div className="mt-16 relative bg-[#1b1b1b]/40 backdrop-blur-md p-10 md:p-14 rounded-[2.5rem] border border-[#bbc9d0]/10 overflow-hidden shadow-2xl group transition-all hover:bg-[#1b1b1b]/60 hover:border-[#bbc9d0]/20">
+
         {/* Subtle Background Glow */}
         <div className="absolute -top-32 -right-32 w-96 h-96 bg-[radial-gradient(ellipse_at_center,_rgba(187,201,208,0.05)_0%,_transparent_70%)] rounded-full blur-3xl pointer-events-none transition-all duration-700 group-hover:bg-[radial-gradient(ellipse_at_center,_rgba(187,201,208,0.1)_0%,_transparent_70%)]"></div>
 
@@ -133,22 +139,22 @@ const AboutSection = () => {
               </span>
               <div className="h-[1px] w-12 bg-[#bbc9d0]/20"></div>
             </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-extrabold text-[#f8f9fa] tracking-tight mb-6 leading-tight">
               Empowering via <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#bbc9d0] to-[#5f6c73]">U&I</span>
             </h2>
-            
+
             <p className="text-[#c2c7cb] text-lg leading-relaxed font-medium">
               Applying principles of structure and growth to community impact as a Teaching Volunteer, mentoring students to reach their full potential.
             </p>
           </div>
-          
+
           <div className="flex flex-row items-center gap-6 md:gap-8 pl-0 lg:pl-12 lg:border-l-2 border-[#bbc9d0]/10">
             <div className="text-left lg:text-center">
               <p className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-[#f8f9fa] to-[#5f6c73]">Volunteer</p>
               <p className="text-[#c2c7cb] text-[11px] uppercase tracking-[0.2em] mt-3 font-semibold">Teaching & Mentorship</p>
             </div>
-            
+
             <div className="hidden sm:flex items-center justify-center w-16 h-16 rounded-full border border-[#bbc9d0]/20 bg-[#131313]/50 shadow-[0_0_20px_rgba(187,201,208,0.05)]">
               <span className="material-symbols-outlined text-3xl text-[#bbc9d0]" style={{ fontVariationSettings: "'FILL' 1" }}>volunteer_activism</span>
             </div>
