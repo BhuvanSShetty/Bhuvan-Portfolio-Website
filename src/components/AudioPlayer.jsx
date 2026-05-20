@@ -17,17 +17,15 @@ const AudioPlayer = () => {
           // Autoplay started!
           setIsPlaying(true);
         }).catch(error => {
-          // Autoplay was prevented by browser
-          console.log("Autoplay prevented by browser:", error);
           setIsPlaying(false);
         });
       }
     };
 
-    // 1. Try to autoplay immediately when the site loads
-    tryPlay();
+    // We removed the immediate tryPlay() here to stop the red console error.
+    // It will now ONLY try to play when you first click the screen!
 
-    // 2. If blocked, wait for the user's VERY FIRST interaction anywhere on the website
+    // Wait for the user's VERY FIRST interaction anywhere on the website
     const handleFirstInteraction = () => {
       if (audioRef.current && audioRef.current.paused) {
         tryPlay();
