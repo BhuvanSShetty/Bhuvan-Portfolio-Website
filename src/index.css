@@ -97,6 +97,16 @@
     background: rgba(51, 77, 88, 0.4);
     backdrop-filter: blur(16px);
   }
+
+  .h-dynamic {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .min-h-dynamic {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
 }
 
 ::selection {

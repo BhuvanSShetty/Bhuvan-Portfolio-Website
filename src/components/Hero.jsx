@@ -3,7 +3,7 @@ import portrait from '../assets/bhuvan.png';
 
 const Hero = ({ isVisible }) => {
   return (
-    <section id="home" className="min-h-[100dvh] flex items-center px-8 lg:px-24 max-w-[1600px] mx-auto pt-32 pb-20">
+    <section id="home" className="min-h-dynamic flex items-center px-8 lg:px-24 max-w-[1600px] mx-auto pt-32 pb-20">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 w-full relative z-10">
 
         {/* Text Content */}

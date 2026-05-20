@@ -14,14 +14,14 @@ function App() {
   const [hasEntered, setHasEntered] = useState(false);
 
   return (
-    <div className="min-h-[100dvh] font-sans overflow-x-hidden bg-[#131313] text-[#e5e2e1] relative">
+    <div className="min-h-dynamic font-sans overflow-x-hidden bg-[#131313] text-[#e5e2e1] relative">
       
       {/* Global Background Grid (Dots) & Cinematic Noise Overlay */}
       <div className="fixed -top-[50vh] left-0 w-full h-[200vh] z-0 opacity-40 pointer-events-none" style={{ backgroundImage: 'radial-gradient(rgba(187, 201, 208, 0.25) 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
       <div className="fixed -top-[50vh] left-0 w-full h-[200vh] z-0 opacity-[0.15] pointer-events-none mix-blend-overlay" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E")' }}></div>
       
       {/* Unpredictable Ambient Deep Space Effect */}
-      <div className="fixed top-0 left-0 w-full h-[100dvh] z-0 pointer-events-none overflow-hidden">
+      <div className="fixed top-0 left-0 w-full h-dynamic z-0 pointer-events-none overflow-hidden">
         
         {/* Realistic Deep Space Nebula / Aurora Clouds (Monochromatic) */}
         <div className="absolute inset-0 opacity-100 mix-blend-screen">
