@@ -95,8 +95,8 @@ const AudioPlayer = ({ isVisible = true }) => {
         onClick={() => setShowSlider(true)}
       >
         
-        {/* Volume Slider - Expands on hover (desktop) or tap (mobile) */}
-        <div className={`overflow-hidden transition-all duration-500 ease-in-out flex items-center justify-center ${showSlider ? 'w-28 opacity-100' : 'w-0 opacity-0'}`}>
+        {/* Volume Slider - Expands on hover (desktop), hidden on mobile */}
+        <div className={`hidden md:flex overflow-hidden transition-all duration-500 ease-in-out items-center justify-center ${showSlider ? 'w-28 opacity-100' : 'w-0 opacity-0'}`}>
           <input 
             type="range" 
             min="0" 
